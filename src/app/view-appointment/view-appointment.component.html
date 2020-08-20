@@ -1,0 +1,38 @@
+<div>
+    View Appointment...
+</div>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-sm">
+        <thead>
+            <tr>
+                <th scope="col" class="h1">Sl NO</th>
+                <th scope="col" class="h2">Name</th>
+                <th scope="col" class="h3">Address</th>
+                <th scope="col" class="h4">City</th>
+                <th scope="col" class="h5">Package</th>
+                <th scope="col" class="h6">Trainer Preference</th>
+                <th scope="col" class="h7">Phone</th>
+                <td class="fo">Edit</td>
+                <td class="fo">Delete</td>
+            </tr>
+        </thead>
+    
+    <tbody>
+        <tr *ngFor="let user of allUser" class="table-light">
+           
+            <td>{{user.id}}</td>
+            <td>{{user.firstname}}  {{user.lastname}}</td>
+            <td>{{user.streetaddress}} </td>
+            <td>{{user.city}}</td>
+            <td>{{user.packages}}</td>
+            <td>{{user.trainerpreference}}</td>
+            <td>{{user.phonenumber}}</td>
+            
+            
+            <td><button (click)="editUser(user)" class="btn btn-warning">edit</button></td>
+            <td><button (click)="deleteUser(user)" class="btn btn-danger">delete</button></td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+    

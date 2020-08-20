@@ -1,0 +1,68 @@
+<!--logo and heading-->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3">
+      <div class="logo mx-5">
+        <img src="../assets/images/applogo.png" style="width:100px;height:100px" class="rounded-circle" alt="img"/>
+      </div>
+    </div>
+    <div class="col-6 mx-auto my-auto">
+      <h1>FITNESS TRACKER</h1>
+    </div>
+</div>
+<!--navbar-->
+
+<div>
+<nav class="navbar navbar-expand-lg navbar-light bg-success">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <button (click)="landingpage()" class="btn btn-success">Home</button>
+      </li>
+      <li class="nav-item">
+        <button (click)="placeAppointment()" class="btn btn-success" >Place Appointment</button>
+      </li>
+      <li class="nav-item">
+        <button (click)="viewAppointment()" class="btn btn-success">View Appointment</button>
+      </li>
+      <li class="nav-item">
+        <button (click)="contactUspage()" class="btn btn-success">Contact Us</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+</div>
+<div class="" id="wrap">
+  <div class="sidebar bg-light border-dark">
+    <ul>
+      <li>
+        <a (click)="landingpage()" class="btn btn-lg">
+          <i class="fas fa-home nav-i"></i>Home
+        </a>
+      </li>
+      <li>
+        <a (click)="placeAppointment()" class="btn btn-lg">
+          <i class="fas fa-user-plus nav-i"></i>Place App
+        </a>
+      </li>
+      <li>
+        <a (click)="viewAppointment()" class="btn btn-lg">
+          <i class="far fa-eye nav-i"></i>View App
+        </a>
+      </li>
+      <li>
+        <a (click)="contactUspage()" class="btn btn-lg">
+          <i class="fas fa-id-card-alt nav-i"></i>Contact Us
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="wrap">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
